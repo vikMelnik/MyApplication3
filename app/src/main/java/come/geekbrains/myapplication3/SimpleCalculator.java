@@ -27,14 +27,6 @@ public class SimpleCalculator {
 
   }
 
-  public String getTextField() {
-    return textField;
-  }
-
-  public void setTextField(String textField) {
-    this.textField = textField;
-  }
-
   public void calculate(int id){
 
     switch (id) {
