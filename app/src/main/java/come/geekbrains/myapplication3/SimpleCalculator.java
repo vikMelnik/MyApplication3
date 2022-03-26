@@ -23,7 +23,6 @@ public class SimpleCalculator {
   }
 
   public SimpleCalculator() {
-    textField = "0";
 
   }
 
@@ -59,9 +58,6 @@ public class SimpleCalculator {
         break;
       case (R.id.button_9):
         textField = "9";
-        break;
-      case (R.id.butt_point):
-        textField = ".";//???????
         break;
     }
   }

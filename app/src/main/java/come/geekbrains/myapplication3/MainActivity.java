@@ -3,6 +3,7 @@ package come.geekbrains.myapplication3;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,6 +42,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     initButtonSquareClickListener();
     initButtonEqualClickListener();
     initButtonDeleteClickListener();
+    initButtonDotClickListener();
+  }
+
+  private void initButtonDotClickListener() {
+    ((Button) findViewById(R.id.butt_point)).setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        String s = String.valueOf(mEditText.getText());
+        int dot = s.indexOf('.');
+        if (dot == -1)
+          mEditText.setText(mEditText.getText() + ".");
+      }
+    });
   }
 
   private void initButtonDeleteClickListener() {
@@ -75,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else {
           mSmplCalc.setNumOne(Double.parseDouble(mEditText.getText() + ""));
           mMinus = true;
-          mEditText.setText(null);
+          mEditText.setText(" ");
         }
       }
     });
@@ -90,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else {
           mSmplCalc.setNumOne(Double.parseDouble(mEditText.getText() + ""));
           mMulti = true;
-          mEditText.setText(null);
+          mEditText.setText(" ");
         }
       }
     });
@@ -105,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else {
           mSmplCalc.setNumOne(Double.parseDouble(mEditText.getText() + ""));
           mDivide = true;
-          mEditText.setText(null);
+          mEditText.setText(" ");
         }
       }
     });
@@ -149,7 +163,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else {
           mSmplCalc.setNumOne(Double.parseDouble(mEditText.getText() + ""));
           mPlus = true;
-          mEditText.setText(null);
+          mEditText.setText(" ");
         }
       }
     });
