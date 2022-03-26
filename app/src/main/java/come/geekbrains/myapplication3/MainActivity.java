@@ -84,13 +84,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ((Button) findViewById(R.id.butt_minus)).setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        if (mEditText == null) {
-          mEditText.setText("");
-        } else {
-          mSmplCalc.setNumOne(Double.parseDouble(mEditText.getText() + ""));
-          mMinus = true;
-          mEditText.setText(" ");
-        }
+        calcAction();
+        mMinus = true;
       }
     });
   }
@@ -99,13 +94,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ((Button) findViewById(R.id.butt_multyplye)).setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        if (mEditText == null) {
-          mEditText.setText("");
-        } else {
-          mSmplCalc.setNumOne(Double.parseDouble(mEditText.getText() + ""));
-          mMulti = true;
-          mEditText.setText(" ");
-        }
+        calcAction();
+        mMulti = true;
       }
     });
   }
@@ -114,13 +104,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ((Button) findViewById(R.id.butt_divide)).setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        if (mEditText == null) {
-          mEditText.setText("");
-        } else {
-          mSmplCalc.setNumOne(Double.parseDouble(mEditText.getText() + ""));
-          mDivide = true;
-          mEditText.setText(" ");
-        }
+        calcAction();
+        mDivide = true;
+      }
+    });
+  }
+
+  private void initButtonPlusClickListener() {
+    ((Button) findViewById(R.id.butt_plus)).setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        calcAction();
+        mPlus = true;
       }
     });
   }
@@ -154,19 +149,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     });
   }
 
-  private void initButtonPlusClickListener() {
-    ((Button) findViewById(R.id.butt_plus)).setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-        if (mEditText == null) {
-          mEditText.setText("");
-        } else {
-          mSmplCalc.setNumOne(Double.parseDouble(mEditText.getText() + ""));
-          mPlus = true;
-          mEditText.setText(" ");
-        }
-      }
-    });
+  private void calcAction() {
+    if (mEditText == null) {
+      mEditText.setText("");
+    } else {
+      mSmplCalc.setNumOne(Double.parseDouble(mEditText.getText() + ""));
+      mEditText.setText(" ");
+    }
+
   }
 
   @Override
