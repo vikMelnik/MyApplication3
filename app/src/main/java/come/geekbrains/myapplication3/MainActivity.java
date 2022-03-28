@@ -3,6 +3,7 @@ package come.geekbrains.myapplication3;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,6 +42,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     initButtonSquareClickListener();
     initButtonEqualClickListener();
     initButtonDeleteClickListener();
+    initButtonDotClickListener();
+  }
+
+  private void initButtonDotClickListener() {
+    ((Button) findViewById(R.id.butt_point)).setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        String s = String.valueOf(mEditText.getText());
+        int dot = s.indexOf('.');
+        if (dot == -1)
+          mEditText.setText(mEditText.getText() + ".");
+      }
+    });
   }
 
   private void initButtonDeleteClickListener() {
@@ -70,13 +84,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ((Button) findViewById(R.id.butt_minus)).setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        if (mEditText == null) {
-          mEditText.setText("");
-        } else {
-          mSmplCalc.setNumOne(Double.parseDouble(mEditText.getText() + ""));
-          mMinus = true;
-          mEditText.setText(null);
-        }
+        calcAction();
+        mMinus = true;
       }
     });
   }
@@ -85,13 +94,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ((Button) findViewById(R.id.butt_multyplye)).setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        if (mEditText == null) {
-          mEditText.setText("");
-        } else {
-          mSmplCalc.setNumOne(Double.parseDouble(mEditText.getText() + ""));
-          mMulti = true;
-          mEditText.setText(null);
-        }
+        calcAction();
+        mMulti = true;
       }
     });
   }
@@ -100,13 +104,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ((Button) findViewById(R.id.butt_divide)).setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        if (mEditText == null) {
-          mEditText.setText("");
-        } else {
-          mSmplCalc.setNumOne(Double.parseDouble(mEditText.getText() + ""));
-          mDivide = true;
-          mEditText.setText(null);
-        }
+        calcAction();
+        mDivide = true;
+      }
+    });
+  }
+
+  private void initButtonPlusClickListener() {
+    ((Button) findViewById(R.id.butt_plus)).setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        calcAction();
+        mPlus = true;
       }
     });
   }
@@ -140,19 +149,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     });
   }
 
-  private void initButtonPlusClickListener() {
-    ((Button) findViewById(R.id.butt_plus)).setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-        if (mEditText == null) {
-          mEditText.setText("");
-        } else {
-          mSmplCalc.setNumOne(Double.parseDouble(mEditText.getText() + ""));
-          mPlus = true;
-          mEditText.setText(null);
-        }
-      }
-    });
+  private void calcAction() {
+    if (mEditText == null) {
+      mEditText.setText("");
+    } else {
+      mSmplCalc.setNumOne(Double.parseDouble(mEditText.getText() + ""));
+      mEditText.setText(" ");
+    }
+
   }
 
   @Override

@@ -23,16 +23,7 @@ public class SimpleCalculator {
   }
 
   public SimpleCalculator() {
-    textField = "0";
 
-  }
-
-  public String getTextField() {
-    return textField;
-  }
-
-  public void setTextField(String textField) {
-    this.textField = textField;
   }
 
   public void calculate(int id){
@@ -67,9 +58,6 @@ public class SimpleCalculator {
         break;
       case (R.id.button_9):
         textField = "9";
-        break;
-      case (R.id.butt_point):
-        textField = ".";//???????
         break;
     }
   }
