@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="@id/editText"
         app:layout_constraintTop_toBottomOf="@+id/editText"
         app:layout_constraintVertical_chainStyle="packed"
-        style="@style/CalcButton"/>
+        />
 
     <Button
         android:id="@+id/button_2"
@@ -30,7 +30,7 @@
         app:layout_constraintStart_toEndOf="@+id/button_1"
         app:layout_constraintTop_toBottomOf="@+id/editText"
         app:layout_constraintVertical_chainStyle="packed"
-        style="@style/CalcButton"/>
+        />
 
     <Button
         android:id="@+id/button_3"
@@ -44,7 +44,7 @@
         app:layout_constraintStart_toEndOf="@id/button_2"
         app:layout_constraintTop_toBottomOf="@+id/editText"
         app:layout_constraintVertical_chainStyle="packed"
-        style="@style/CalcButton"/>
+        />
 
     <Button
         android:id="@+id/butt_multyplye"
@@ -56,7 +56,7 @@
         app:layout_constraintStart_toEndOf="@id/button_3"
         app:layout_constraintTop_toBottomOf="@+id/editText"
         app:layout_constraintVertical_chainStyle="packed"
-        style="@style/CalcButton"/>
+        />
 
     <Button
         android:id="@+id/button_4"
@@ -69,7 +69,7 @@
         app:layout_constraintStart_toStartOf="@id/button_1"
         app:layout_constraintTop_toBottomOf="@+id/button_1"
         app:layout_constraintVertical_bias="0.25"
-        style="@style/CalcButton"/>
+        />
 
     <Button
         android:id="@+id/button_5"
@@ -80,7 +80,7 @@
         app:layout_constraintEnd_toStartOf="@id/button_6"
         app:layout_constraintStart_toEndOf="@id/button_4"
         app:layout_constraintTop_toBottomOf="@+id/button_2"
-        style="@style/CalcButton"/>
+        />
 
     <Button
         android:id="@+id/button_6"
@@ -92,7 +92,7 @@
         app:layout_constraintStart_toEndOf="@id/button_5"
         app:layout_constraintTop_toBottomOf="@+id/button_3"
         app:layout_constraintVertical_bias="0.25"
-        style="@style/CalcButton"/>
+        />
 
     <Button
         android:id="@+id/butt_divide"
@@ -103,7 +103,7 @@
         app:layout_constraintStart_toEndOf="@id/button_6"
         app:layout_constraintTop_toBottomOf="@+id/butt_multyplye"
         app:layout_constraintVertical_bias="0.25"
-        style="@style/CalcButton"/>
+       />
 
     <Button
         android:id="@+id/button_7"
@@ -117,7 +117,7 @@
         app:layout_constraintStart_toStartOf="@id/button_4"
         app:layout_constraintTop_toBottomOf="@+id/button_4"
         app:layout_constraintVertical_bias="0.25"
-        style="@style/CalcButton"/>
+        />
 
     <Button
         android:id="@+id/button_8"
@@ -129,7 +129,7 @@
         app:layout_constraintStart_toEndOf="@+id/button_7"
         app:layout_constraintTop_toBottomOf="@+id/button_5"
         app:layout_constraintVertical_bias="0.25"
-        style="@style/CalcButton"/>
+        />
 
     <Button
         android:id="@+id/button_9"
@@ -141,7 +141,7 @@
         app:layout_constraintStart_toEndOf="@+id/button_8"
         app:layout_constraintTop_toBottomOf="@+id/button_6"
         app:layout_constraintVertical_bias="0.25"
-        style="@style/CalcButton"/>
+        />
 
     <Button
         android:id="@+id/butt_plus"
@@ -152,7 +152,7 @@
         app:layout_constraintStart_toEndOf="@+id/butt_square"
         app:layout_constraintTop_toBottomOf="@+id/butt_minus"
         app:layout_constraintVertical_bias="0.25"
-        style="@style/CalcButton"/>
+        />
 
     <Button
         android:id="@+id/button_0"
@@ -164,7 +164,7 @@
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="@id/button_7"
         app:layout_constraintTop_toBottomOf="@+id/button_7"
-        style="@style/CalcButton"/>
+        />
 
     <Button
         android:id="@+id/butt_point"
@@ -175,7 +175,7 @@
         app:layout_constraintEnd_toStartOf="@+id/butt_square"
         app:layout_constraintStart_toEndOf="@+id/button_0"
         app:layout_constraintTop_toBottomOf="@+id/button_8"
-        style="@style/CalcButton"/>
+        />
 
     <Button
         android:id="@+id/butt_square"
@@ -187,7 +187,7 @@
         app:layout_constraintStart_toEndOf="@+id/butt_point"
         app:layout_constraintTop_toBottomOf="@+id/button_9"
         app:layout_constraintVertical_bias="0.25"
-        style="@style/CalcButton"/>
+       />
 
     <Button
         android:id="@+id/butt_minus"
@@ -198,7 +198,7 @@
         app:layout_constraintStart_toEndOf="@+id/button_9"
         app:layout_constraintTop_toBottomOf="@+id/butt_divide"
         app:layout_constraintVertical_bias="0.25"
-        style="@style/CalcButton"/>
+        />
 
     <Button
         android:id="@+id/butt_delete"
@@ -222,7 +222,7 @@
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@id/butt_delete"
         app:layout_constraintTop_toBottomOf="@id/butt_square"
-        style="@style/CalcButton"/>
+       />
 
     <EditText
         android:id="@+id/editText"
