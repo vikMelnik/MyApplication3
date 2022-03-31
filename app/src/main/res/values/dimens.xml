@@ -5,4 +5,7 @@
     <dimen name="button_radius">24dp</dimen>
     <dimen name="margin_end">8dp</dimen>
     <dimen name="margin_top">32dp</dimen>
+    <dimen name="margin_start_text">16dp</dimen>
+    <dimen name="margin_end_text">16dp</dimen>
+    <dimen name="margin_top_text">32dp</dimen>
 </resources>

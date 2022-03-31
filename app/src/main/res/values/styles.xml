@@ -5,6 +5,7 @@
         <item name="cornerRadius">@dimen/button_radius</item>
         <item name="android:backgroundTint">@color/btn_bk_grnd</item>
         <item name="android:textColor">@color/btn_txt</item>
+        
     </style>
 
     <style name="CalcButton.Action" >
