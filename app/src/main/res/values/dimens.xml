@@ -3,4 +3,6 @@
     <dimen name="button_text">36dp</dimen>
     <dimen name="button_textV">28dp</dimen>
     <dimen name="button_radius">24dp</dimen>
+    <dimen name="margin_end">8dp</dimen>
+    <dimen name="margin_top">32dp</dimen>
 </resources>

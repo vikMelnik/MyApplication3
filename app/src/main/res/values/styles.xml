@@ -6,6 +6,7 @@
         <item name="android:backgroundTint">@color/btn_bk_grnd</item>
         <item name="android:textColor">@color/btn_txt</item>
     </style>
+
     <style name="CalcButton.Action" >
         <item name="android:textColor">@color/text_C</item>
 

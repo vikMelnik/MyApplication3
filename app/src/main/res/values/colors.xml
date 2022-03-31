@@ -11,4 +11,5 @@
     <color name="btn_bk_grnd">#FF5722</color>
     <color name="btn_txt">#009688</color>
     <color name="text_C">#673AB7</color>
+    <color name="bk_ground">#DFD398</color>
 </resources>
