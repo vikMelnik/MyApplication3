@@ -2,6 +2,8 @@ package come.geekbrains.myapplication3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
@@ -43,6 +45,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     initButtonEqualClickListener();
     initButtonDeleteClickListener();
     initButtonDotClickListener();
+    initButtonThemeClickListener();
+  }
+
+  private void initButtonThemeClickListener() {
+    ((Button) findViewById(R.id.button_setting)).setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        Intent intent = new Intent(MainActivity.this, SettingTheme.class);
+        startActivity(intent);
+      }
+    });
   }
 
   private void initButtonDotClickListener() {

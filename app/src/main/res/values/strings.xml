@@ -18,4 +18,7 @@
     <string name="minus">-</string>
     <string name="delete">С</string>
     <string name="equal">=</string>
+    <string name="key_setting">ChooseTheme</string>
+    <string name="theme_one">One</string>
+    <string name="theme_two">Two</string>
 </resources>
