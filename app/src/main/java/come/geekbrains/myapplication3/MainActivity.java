@@ -1,9 +1,14 @@
 package come.geekbrains.myapplication3;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,7 +22,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+
+    ThemeStorage storage = ThemeStorage.getInstance(getApplicationContext());
+
+    Theme savedTheme = storage.getTheme();
+
+    ActivityResultLauncher<Intent> launcher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+      @Override
+      public void onActivityResult(ActivityResult result) {
+        if (result.getResultCode() == Activity.RESULT_OK){
+          Intent data = result.getData();
+
+          Theme chosenTheme = (Theme) data.getSerializableExtra(SettingThemeActivity.CHOSEN_THEME);
+          storage.saveTheme(chosenTheme);
+
+          recreate();
+        }
+      }
+    });
+
+    setTheme(savedTheme.getTheme());
+
     setContentView(R.layout.activity_main);
+
+    findViewById(R.id.button_setting).setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        Intent intent = new Intent(MainActivity.this, SettingThemeActivity.class);
+        intent.putExtra(SettingThemeActivity.SELECTED_THEME, savedTheme );
+        launcher.launch(intent);
+      }
+    });
+
     initView();
   }
 
@@ -43,7 +79,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     initButtonEqualClickListener();
     initButtonDeleteClickListener();
     initButtonDotClickListener();
+
   }
+
+
+
 
   private void initButtonDotClickListener() {
     ((Button) findViewById(R.id.butt_point)).setOnClickListener(new View.OnClickListener() {
