@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class SettingTheme extends AppCompatActivity {
+public class SettingThemeActivity extends AppCompatActivity {
 
   public static final String SELECTED_THEME = "SELECTED_THEME";
   public static final String CHOSEN_THEME = "CHOSEN_THEME";

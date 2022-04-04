@@ -6,7 +6,7 @@ import androidx.annotation.StyleRes;
 public enum Theme {
 
   ONE(R.style.CalcButton, R.string.theme_one,"THEME_ONE"),
-  TWO(R.style.CalcButton_Action, R.string.theme_two, "THEME_TWO");
+  TWO(R.style.CalcButton_V2, R.string.theme_two, "THEME_TWO");
 
   private @StyleRes
           final int theme;

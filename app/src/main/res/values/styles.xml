@@ -13,5 +13,9 @@
 
     </style>
 
+    <style name="CalcButton.V2">
+        <item name="android:backgroundTint">@android:color/holo_red_dark</item>
+    </style>
+
 
 </resources>
